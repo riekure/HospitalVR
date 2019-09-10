@@ -113,6 +113,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &13063403 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 107544, guid: 2fa97d29375bda64080d41087c0c107c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1520012842}
+--- !u!114 &13063406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 13063403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df531d79ac0ef5643b54d2b4bb4b87ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeOut: 2
+  threshold: 0.5
 --- !u!1001 &17008925
 Prefab:
   m_ObjectHideFlags: 0
@@ -2135,6 +2153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 718558281}
   - component: {fileID: 718558280}
+  - component: {fileID: 718558282}
   m_Layer: 0
   m_Name: Point light (2)
   m_TagString: Untagged
@@ -2171,7 +2190,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1.4
@@ -2192,6 +2211,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 59
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &718558282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 718558279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df531d79ac0ef5643b54d2b4bb4b87ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeOut: 2
+  threshold: 0.5
 --- !u!1001 &753066883
 Prefab:
   m_ObjectHideFlags: 0
@@ -2550,6 +2582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 864415698}
   - component: {fileID: 864415697}
+  - component: {fileID: 864415699}
   m_Layer: 0
   m_Name: Point light (1)
   m_TagString: Untagged
@@ -2586,7 +2619,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1.4
@@ -2607,6 +2640,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 60
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &864415699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 864415696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df531d79ac0ef5643b54d2b4bb4b87ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeOut: 2
+  threshold: 0.5
 --- !u!1001 &884435327
 Prefab:
   m_ObjectHideFlags: 0
@@ -2894,6 +2940,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.775769, y: 2.926325, z: 7.561047}
   m_Center: {x: -0.0000009536743, y: 0.0000001192093, z: 0.00000023841858}
+--- !u!54 &1053656533
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1053656528}
+  serializedVersion: 2
+  m_Mass: 5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1055188370
 Prefab:
   m_ObjectHideFlags: 0
@@ -3889,6 +3950,10 @@ Prefab:
     - target: {fileID: 428016, guid: 2fa97d29375bda64080d41087c0c107c, type: 2}
       propertyPath: m_RootOrder
       value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 10822452, guid: 2fa97d29375bda64080d41087c0c107c, type: 2}
+      propertyPath: m_Lightmapping
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fa97d29375bda64080d41087c0c107c, type: 2}
