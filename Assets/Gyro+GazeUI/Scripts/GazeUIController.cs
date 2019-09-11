@@ -40,7 +40,8 @@ public class GazeUIController : MonoBehaviour
                     movePlane_1.GetComponent<Renderer>().material = _material[1];   // ヒットの色
                     if (DrawSpriteFromGazeTimeCount(movePlaneSprite_1) == true)
                     {
-                        mainCamera.transform.position = new Vector3(3.5f, 2.5f, 0);
+                        iTween.MoveTo(mainCamera, iTween.Hash("x", 0, "y", 1, "z", 0.5,
+                                                            "time", 1, "islocal", true));
                         mainCamera.transform.rotation = Quaternion.Euler(0, 90, 0);
                         gazeTimeCount = 3.0f;
                     }
@@ -50,7 +51,8 @@ public class GazeUIController : MonoBehaviour
                     movePlane_2.GetComponent<Renderer>().material = _material[1];   // ヒットの色
                     if (DrawSpriteFromGazeTimeCount(movePlaneSprite_2) == true)
                     {
-                        mainCamera.transform.position = new Vector3(-0.5f, 2.5f, 0);
+                        iTween.MoveTo(mainCamera, iTween.Hash("x", 0, "y", 1, "z", 4.5,
+                                                            "time", 1, "islocal", true));
                         mainCamera.transform.rotation = Quaternion.Euler(0, 0, 0);
                         gazeTimeCount = 3.0f;
                     }
