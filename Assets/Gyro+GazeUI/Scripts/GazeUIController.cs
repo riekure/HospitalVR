@@ -9,11 +9,13 @@ public class GazeUIController : MonoBehaviour
     public GameObject mainCamera;
     public GameObject movePlane_1;  // 視点UIの対象Plane
     public GameObject movePlane_2;  // 視点UIの対象Plane
+    public GameObject movePlane_3;  // 視点UIの対象Plane
 
     public Material[] _material;    // 対象ボタンの色 0:通常/1:ヒット
 
     public SpriteRenderer movePlaneSprite_1;
     public SpriteRenderer movePlaneSprite_2;
+    public SpriteRenderer movePlaneSprite_3;
 
     public Sprite[] pointer;        // ポインター画像
     public float gazeTimeCount = 3.0f;      // 確定までの時間(秒)
@@ -57,6 +59,17 @@ public class GazeUIController : MonoBehaviour
                         gazeTimeCount = 3.0f;
                     }
                 }
+                if (CheckHitGameObject(hit, movePlane_3) == true)
+                {
+                    movePlane_3.GetComponent<Renderer>().material = _material[1];
+                    if (DrawSpriteFromGazeTimeCount(movePlaneSprite_3) == true)
+                    {
+                        iTween.MoveTo(mainCamera, iTween.Hash("x", 0, "y", 1, "z", 8.5,
+                                                            "time", 1, "islocal", true));
+                        mainCamera.transform.rotation = Quaternion.Euler(0, 0, 0);
+                        gazeTimeCount = 3.0f;
+                    }
+                }
             }
             else
             {
@@ -73,9 +86,11 @@ public class GazeUIController : MonoBehaviour
     {
         movePlane_1.GetComponent<Renderer>().material = _material[0];       // 通常の色
         movePlane_2.GetComponent<Renderer>().material = _material[0];       // 通常の色
+        movePlane_3.GetComponent<Renderer>().material = _material[0];       // 通常の色
 
         movePlaneSprite_1.sprite = pointer[0];
         movePlaneSprite_2.sprite = pointer[0];
+        movePlaneSprite_3.sprite = pointer[0];
 
         gazeTimeCount = 3.0f;
     }
