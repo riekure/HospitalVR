@@ -40,8 +40,9 @@ public class GazeUIController : MonoBehaviour
                     movePlane_1.GetComponent<Renderer>().material = _material[1];   // ヒットの色
                     if (DrawSpriteFromGazeTimeCount(movePlaneSprite_1) == true)
                     {
-                        mainCamera.transform.position = new Vector3(0, 0, 0);
-                        mainCamera.transform.rotation = Quaternion.Euler(0, 0, 0);    // 角度を変えるとき
+                        mainCamera.transform.position = new Vector3(3.5f, 2.5f, 0);
+                        mainCamera.transform.rotation = Quaternion.Euler(0, 90, 0);
+                        gazeTimeCount = 3.0f;
                     }
                 }
                 if (CheckHitGameObject(hit, movePlane_2) == true)
@@ -49,8 +50,9 @@ public class GazeUIController : MonoBehaviour
                     movePlane_2.GetComponent<Renderer>().material = _material[1];   // ヒットの色
                     if (DrawSpriteFromGazeTimeCount(movePlaneSprite_2) == true)
                     {
-                        mainCamera.transform.position = new Vector3(0, 1f, 0);
-                        mainCamera.transform.rotation = Quaternion.Euler(0, 0, 0);    // 角度を変えるとき
+                        mainCamera.transform.position = new Vector3(-0.5f, 2.5f, 0);
+                        mainCamera.transform.rotation = Quaternion.Euler(0, 0, 0);
+                        gazeTimeCount = 3.0f;
                     }
                 }
             }
