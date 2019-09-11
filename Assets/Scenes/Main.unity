@@ -820,7 +820,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 186719734}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -2949,7 +2949,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 764589763}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -3108,6 +3108,106 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5713ed639ef83f945b71f3b92342d629, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1001 &858477902
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4412998324943918, guid: 256b98d47a67d0148a54b544944e1cc0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -4.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412998324943918, guid: 256b98d47a67d0148a54b544944e1cc0, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412998324943918, guid: 256b98d47a67d0148a54b544944e1cc0, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412998324943918, guid: 256b98d47a67d0148a54b544944e1cc0, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412998324943918, guid: 256b98d47a67d0148a54b544944e1cc0, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412998324943918, guid: 256b98d47a67d0148a54b544944e1cc0, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412998324943918, guid: 256b98d47a67d0148a54b544944e1cc0, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412998324943918, guid: 256b98d47a67d0148a54b544944e1cc0, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1517618686915466, guid: 256b98d47a67d0148a54b544944e1cc0, type: 2}
+      propertyPath: m_Name
+      value: SwitchPlane
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412998324943918, guid: 256b98d47a67d0148a54b544944e1cc0, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412998324943918, guid: 256b98d47a67d0148a54b544944e1cc0, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 23840819362990622, guid: 256b98d47a67d0148a54b544944e1cc0,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1517618686915466, guid: 256b98d47a67d0148a54b544944e1cc0, type: 2}
+      propertyPath: m_TagString
+      value: SwitchUI
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 256b98d47a67d0148a54b544944e1cc0, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1 &858477903 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1517618686915466, guid: 256b98d47a67d0148a54b544944e1cc0,
+    type: 2}
+  m_PrefabInternal: {fileID: 858477902}
+--- !u!212 &858477904 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 212456099744128384, guid: 256b98d47a67d0148a54b544944e1cc0,
+    type: 2}
+  m_PrefabInternal: {fileID: 858477902}
+--- !u!114 &858477905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 858477903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0321c5e54dd009e4abb551f72f4053cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 464961130}
+  switchPlane_1: {fileID: 858477903}
+  targetLight: {fileID: 864415696}
+  _material:
+  - {fileID: 2100000, guid: 183b1bf8051bc994cae7b331d4a733a4, type: 2}
+  - {fileID: 2100000, guid: 99ef8dc0e5a138a449cd70fac6a826cd, type: 2}
+  switchPlaneSprite_1: {fileID: 858477904}
+  pointer:
+  - {fileID: 21300000, guid: 3d9a0e8c45772074089e1eff45f34a38, type: 3}
+  - {fileID: 21300000, guid: 2f0ec30583eae9f4b8c95296ebd2e248, type: 3}
+  - {fileID: 21300000, guid: 532b512a80def18479ba445322fb6780, type: 3}
+  - {fileID: 21300000, guid: 931257a7d2d911a46a9f8ae5e4618bff, type: 3}
+  - {fileID: 21300000, guid: dfa2142b2271cde4c859f47c64132e3c, type: 3}
+  - {fileID: 21300000, guid: 143c7e96567ab7044a516f29b22435fb, type: 3}
+  - {fileID: 21300000, guid: b9a8e16ecb3e2de4a950f06887e14d29, type: 3}
+  gazeTimeCount: 3
 --- !u!1 &864415696
 GameObject:
   m_ObjectHideFlags: 0
@@ -3610,9 +3710,9 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1053656528}
   serializedVersion: 2
-  m_Mass: 5
+  m_Mass: 0.5
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -4447,7 +4547,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1335663307}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
