@@ -56,16 +56,17 @@ public class SwitchPanelController : MonoBehaviour {
     public void gazeOff()
     {
         switchPlane_1.GetComponent<Renderer>().material = _material[0];       // 通常の色
-
         switchPlaneSprite_1.sprite = pointer[0];
-
         gazeTimeCount = 3.0f;
     }
 
     public bool CheckHitGameObject(RaycastHit hit, GameObject obj)
     {
         bool result = false;
-        if (hit.collider.gameObject == obj) result = true;
+        if (hit.collider.gameObject == obj)
+        {
+            result = true;
+        }
         return result;
     }
 
